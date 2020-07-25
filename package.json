@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "color-data-picker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/zhoushaokun/cdp.git"
   },
-  "keywords": [],
+  "keywords": [
+    "canvas",
+    "image"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
