@@ -1,3 +1,4 @@
+const average = require('./util');
 const getContext = function (width, height) {
   var canvas = document.createElement('canvas');
   canvas.setAttribute('width', width);
@@ -82,5 +83,6 @@ const getImageDataWrapper = (src, { x, y, spanX, spanY, scale, fail = () => {}, 
 }
 
 module.exports = {
-	getImageData: getImageDataWrapper,
+    getImageData: getImageDataWrapper,
+    average,
 };
