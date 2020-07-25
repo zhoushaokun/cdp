@@ -82,6 +82,5 @@ const getImageDataWrapper = (src, { x, y, spanX, spanY, scale, fail, ...options 
 }
 
 module.exports = {
-	calAverageColor,
 	getImageData: getImageDataWrapper,
 };
