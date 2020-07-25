@@ -23,6 +23,32 @@ cdp.getImageData(url, {
 });
 ```
 
+## API
+getImageData 接受两个参数`url`和`config`。
+- url: string;
+
+- config: Object;
+
+```typescript
+interface ConfigType{
+    success: (data: number[]) => void;
+    fail: (msg: string) => void;
+    x?: number;
+    y?: number;
+    spanX?: numbr;
+    spanY?: numbr;
+    scale?: numbr | (realWidth?: number, realHeight?: number) => number;
+}
+```
+| name | type | default |
+|--|--|--|
+| x | number | 0 |
+| y | number | 0 |
+| spanX | number | realWidth * scale 或者 realWidth * scale() |
+| spanY | number | realHeight * scale 或者 realHeight * scale()|
+| scale | number 或者 (realWidth: number) => number | 1 |
+| fail | (msg: string) => {} | () => {} |
+
 ## 证书
 
 ISC

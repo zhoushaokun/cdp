@@ -55,7 +55,7 @@ const getImageData = (src, { success, fail, ...options }) => {
     });
 }
 
-const getImageDataWrapper = (src, { x, y, spanX, spanY, scale, fail, ...options }) => {
+const getImageDataWrapper = (src, { x, y, spanX, spanY, scale, fail = () => {}, ...options }) => {
     [x, y, spanX, spanY].forEach(v => {
         if ( v && v < 0 ) {
             const errMsg = 'The area pick param cant be negative!';

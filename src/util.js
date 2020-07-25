@@ -19,5 +19,5 @@ const calAverageColor = (areaData) => {
 }
 
 module.exports = {
-    calAverageColor,
+    average: calAverageColor,
 };
