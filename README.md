@@ -40,14 +40,14 @@ interface ConfigType{
     scale?: numbr | (realWidth?: number, realHeight?: number) => number;
 }
 ```
-| name | type | default |
-|--|--|--|
-| x | number | 0 |
-| y | number | 0 |
-| spanX | number | realWidth * scale 或者 realWidth * scale() |
-| spanY | number | realHeight * scale 或者 realHeight * scale()|
-| scale | number 或者 (realWidth: number) => number | 1 |
-| fail | (msg: string) => {} | () => {} |
+| name | 含义 | type | default |
+|--|--|--|--|
+| x | 起始点横坐标 | number | 0 |
+| y | 起始点纵坐标 | number | 0 |
+| spanX | 横向跨度 | number | realWidth * scale 或者 realWidth * scale() |
+| spanY | 纵向跨度 | number | realHeight * scale 或者 realHeight * scale()|
+| scale | 成功回调 | number 或者 (realWidth: number) => number | 1 |
+| fail | 失败回调 | (msg: string) => {} | () => {} |
 
 ## 证书
 
