@@ -46,7 +46,8 @@ interface ConfigType{
 | y | 起始点纵坐标 | number | 0 |
 | spanX | 横向跨度 | number | realWidth * scale 或者 realWidth * scale() |
 | spanY | 纵向跨度 | number | realHeight * scale 或者 realHeight * scale()|
-| scale | 成功回调 | number 或者 (realWidth: number) => number | 1 |
+| scale | scale设置钩子 | number 或者 (realWidth: number) => number | 1 |
+| success| 成功回调 | (msg: string) => {} | () => {} |
 | fail | 失败回调 | (msg: string) => {} | () => {} |
 
 ## 证书
