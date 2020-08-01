@@ -5,10 +5,10 @@ A JavaScript Lib which can get color data of one picture in certain area.
 ## todo
 
 - [X] get certain rectangle area data of picture
-- [X] support`ES6`syntax
-- [X] add test case
-- [X] support`typescript`
-- [X] get any kind of area data
+- [] support`ES6`syntax
+- [] add test case
+- [] support`typescript`
+- [] get any kind of area data
 
 
 ## how to use
