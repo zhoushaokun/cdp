@@ -1,10 +1,70 @@
+## Abstract
+
+A JavaScript Lib which can get color data of one picture in certain area.
+
+## todo
+
+- [X] get certain rectangle area data of picture
+- [X] support`ES6`syntax
+- [X] add test case
+- [X] support`typescript`
+- [X] get any kind of area data
+
+
+## how to use
+
+This is how we use this lib now.
+```js
+const cdp = require('color-data-picker').getImageData;
+
+cdp.getImageData(url, {
+    success(data){
+        //process(data);
+    },
+});
+```
+
+## API
+getImageData function need two key param:`url`and`config`.
+- url: string;
+
+- config: Object;
+
+This is `typescript` definition.
+```typescript
+interface ConfigType{
+    success: (data: number[]) => void;
+    fail: (msg: string) => void;
+    x?: number;
+    y?: number;
+    spanX?: numbr;
+    spanY?: numbr;
+    scale?: numbr | (realWidth?: number, realHeight?: number) => number;
+}
+```
+| name | meaning | type | default |
+|--|--|--|--|
+| x | x spot of beginning | number | 0 |
+| y | y spot of beginning | number | 0 |
+| spanX | horizonal span | number | realWidth * scale or realWidth * scale() |
+| spanY | vertiacl span | number | realHeight * scale or realHeight * scale()|
+| scale | scale function hook | number 或者 (realWidth: number) => number | 1 |
+| success| success callback | (msg: string) => {} | () => {} |
+| fail | fail callback | (msg: string) => {} | () => {} |
+
+## Certificate
+
+ISC
+
+
+
 ## 概述
 
 用来实现获取图片特定区域的颜色数据。
 
-## todo
+## 要做
 
-- [X] 获取选择矩形区域的颜色值
+- [X] 获取选择矩形区域的颜色值。
 - [ ] 支持`ES6`语法
 - [ ] 增加测试用例
 - [ ] 增加类型定义或者迁移`TypeScript`
@@ -40,7 +100,7 @@ interface ConfigType{
     scale?: numbr | (realWidth?: number, realHeight?: number) => number;
 }
 ```
-| name | 含义 | type | default |
+| name | meaning | type | default |
 |--|--|--|--|
 | x | 起始点横坐标 | number | 0 |
 | y | 起始点纵坐标 | number | 0 |
@@ -53,3 +113,4 @@ interface ConfigType{
 ## 证书
 
 ISC
+
